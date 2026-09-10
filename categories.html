@@ -1,0 +1,898 @@
+v<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Categories | Cartiva</title>
+
+    <meta
+        name="description"
+        content="Explore all Cartiva shopping categories including fashion, electronics, beauty, home and accessories."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Categories CSS -->
+    <link
+        rel="stylesheet"
+        href="css/categories.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="categories-header">
+
+    <nav class="categories-navbar">
+
+        <a
+            href="index.html"
+            class="cartiva-logo"
+        >
+            Cartiva
+        </a>
+
+
+        <div class="categories-desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a
+                href="categories.html"
+                class="active"
+            >
+                Categories
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="categories-nav-actions">
+
+            <!-- Search -->
+
+            <button
+                class="nav-icon-button"
+                id="categoriesSearchButton"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+
+            <!-- Account -->
+
+            <a
+                href="account.html"
+                class="nav-icon-button"
+                aria-label="Account"
+            >
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+
+            <!-- Cart -->
+
+            <a
+                href="cart.html"
+                class="nav-cart-button"
+                aria-label="Shopping cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    id="cart-count"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="categories-menu-button"
+                id="categoriesMobileMenu"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Search Bar -->
+
+    <div
+        class="categories-search-wrapper"
+        id="categoriesSearchWrapper"
+    >
+
+        <div class="categories-search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="categoriesSearchInput"
+                placeholder="Search categories..."
+                autocomplete="off"
+            >
+
+            <button
+                id="categoriesSearchClose"
+                aria-label="Close search"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+
+    <div
+        class="categories-mobile-nav"
+        id="categoriesMobileNav"
+    >
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="shop.html">
+            <i class="fa-solid fa-store"></i>
+            Shop
+        </a>
+
+        <a
+            href="categories.html"
+            class="active"
+        >
+            <i class="fa-solid fa-layer-group"></i>
+            Categories
+        </a>
+
+        <a href="deals.html">
+            <i class="fa-solid fa-tag"></i>
+            Deals
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="account.html">
+            <i class="fa-regular fa-user"></i>
+            Account
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<main>
+
+<section class="categories-hero">
+
+    <div class="categories-hero-content">
+
+        <span class="categories-eyebrow">
+            SHOP BY CATEGORY
+        </span>
+
+
+        <h1>
+            Find what
+            <span>fits your world.</span>
+        </h1>
+
+
+        <p>
+            Explore carefully selected products across fashion,
+            technology, beauty, home and more.
+        </p>
+
+    </div>
+
+
+    <div class="categories-hero-decoration">
+
+        <div class="hero-circle hero-circle-one"></div>
+
+        <div class="hero-circle hero-circle-two"></div>
+
+        <div class="hero-square">
+            <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORY GRID
+===================================================== -->
+
+<section class="categories-section">
+
+    <div class="categories-section-heading">
+
+        <div>
+
+            <span class="section-label">
+                EXPLORE
+            </span>
+
+            <h2>
+                Shop by category
+            </h2>
+
+        </div>
+
+
+        <p>
+            Discover products selected for every part
+            of your everyday life.
+        </p>
+
+    </div>
+
+
+
+    <div
+        class="categories-grid"
+        id="categoriesGrid"
+    >
+
+
+        <!-- FASHION -->
+
+        <a
+            href="shop.html?category=fashion"
+            class="category-card category-card-large"
+            data-category="fashion"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85"
+                    alt="Fashion collection"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    120+ PRODUCTS
+                </span>
+
+                <h3>
+                    Fashion
+                </h3>
+
+                <p>
+                    Modern essentials,
+                    statement pieces and
+                    everyday style.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Fashion
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ELECTRONICS -->
+
+        <a
+            href="shop.html?category=electronics"
+            class="category-card"
+            data-category="electronics"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=85"
+                    alt="Electronics collection"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    95+ PRODUCTS
+                </span>
+
+                <h3>
+                    Electronics
+                </h3>
+
+                <p>
+                    Smart devices and
+                    everyday technology.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Electronics
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- BEAUTY -->
+
+        <a
+            href="shop.html?category=beauty"
+            class="category-card"
+            data-category="beauty"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85"
+                    alt="Beauty products"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    80+ PRODUCTS
+                </span>
+
+                <h3>
+                    Beauty
+                </h3>
+
+                <p>
+                    Skincare, cosmetics
+                    and self-care essentials.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Beauty
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- HOME -->
+
+        <a
+            href="shop.html?category=home"
+            class="category-card"
+            data-category="home"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+                    alt="Home and living products"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    110+ PRODUCTS
+                </span>
+
+                <h3>
+                    Home & Living
+                </h3>
+
+                <p>
+                    Beautiful pieces for
+                    a better everyday space.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Home
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- ACCESSORIES -->
+
+        <a
+            href="shop.html?category=accessories"
+            class="category-card"
+            data-category="accessories"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=1000&q=85"
+                    alt="Accessories collection"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    75+ PRODUCTS
+                </span>
+
+                <h3>
+                    Accessories
+                </h3>
+
+                <p>
+                    Finishing touches
+                    that complete your look.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Accessories
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- SPORTS -->
+
+        <a
+            href="shop.html?category=sports"
+            class="category-card"
+            data-category="sports"
+        >
+
+            <div class="category-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85"
+                    alt="Sports and fitness products"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <span>
+                    60+ PRODUCTS
+                </span>
+
+                <h3>
+                    Sports & Fitness
+                </h3>
+
+                <p>
+                    Gear for movement,
+                    training and active living.
+                </p>
+
+                <div class="category-card-link">
+                    Shop Sports
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     POPULAR SEARCHES
+===================================================== -->
+
+<section class="category-popular">
+
+    <div class="category-popular-inner">
+
+        <div>
+
+            <span class="section-label">
+                QUICK PICKS
+            </span>
+
+            <h2>
+                Looking for something specific?
+            </h2>
+
+            <p>
+                Jump straight into some of Cartiva's
+                most popular collections.
+            </p>
+
+        </div>
+
+
+        <div class="popular-category-links">
+
+            <a href="shop.html?category=fashion">
+                Fashion
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="shop.html?category=electronics">
+                Electronics
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="shop.html?category=beauty">
+                Beauty
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="shop.html?category=home">
+                Home & Living
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="shop.html?category=accessories">
+                Accessories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="shop.html?category=sports">
+                Sports
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="categories-newsletter">
+
+    <div class="newsletter-content">
+
+        <span class="section-label">
+            CARTIVA NEWSLETTER
+        </span>
+
+        <h2>
+            Don't miss the next big deal.
+        </h2>
+
+        <p>
+            Get new arrivals, exclusive offers and
+            special discounts delivered to your inbox.
+        </p>
+
+
+        <form
+            id="categoriesNewsletterForm"
+            class="categories-newsletter-form"
+        >
+
+            <input
+                type="email"
+                id="categoriesNewsletterEmail"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </form>
+
+
+        <div
+            id="categoriesNewsletterMessage"
+            class="newsletter-message"
+        ></div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="categories-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="cartiva-logo"
+            >
+                Cartiva
+            </a>
+
+            <p>
+                Everything you want.
+                All in one place.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="X"
+                >
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Shop
+            </h4>
+
+            <a href="shop.html">
+                All Products
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="shop.html?category=fashion">
+                Fashion
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Customer Care
+            </h4>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Delivery Information
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                FAQs
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Cartiva
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="account.html">
+                My Account
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Cartiva. All rights reserved.
+        </p>
+
+
+        <div class="payment-icons">
+
+            <i class="fa-brands fa-cc-visa"></i>
+
+            <i class="fa-brands fa-cc-mastercard"></i>
+
+            <i class="fa-brands fa-cc-apple-pay"></i>
+
+            <i class="fa-solid fa-credit-card"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Categories JavaScript -->
+
+<script src="js/auth.js"></script>
+<script src="js/categories.js"></script>
+
+</body>
+
+</html>

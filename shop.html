@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Shop | Cartiva</title>
+
+<link
+rel="stylesheet"
+href="css/style.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Cartiva
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="shop.html" class="active">Shop</a></li>
+
+<li><a href="#">Categories</a></li>
+
+<li><a href="deals.html">Deals</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<a href="contact.html">Contact</a>
+
+</ul>
+
+<div class="nav-actions">
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search">
+
+<i class="fa-solid fa-search"></i>
+
+</div>
+
+<a href="account.html">
+
+<i class="fa-regular fa-user"></i>
+
+</a>
+
+<a
+href="cart.html"
+class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cart-count">0</span>
+
+</a>
+
+<button id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<section class="shop-hero">
+
+<h1>
+
+Discover Amazing Products
+
+</h1>
+
+<p>
+
+Browse thousands of premium products carefully selected for everyday shopping.
+
+</p>
+
+</section>
+
+<section class="shop-container">
+
+<!-- Sidebar -->
+
+<aside class="filters">
+
+<h2>
+
+Filters
+
+</h2>
+
+<!-- Search -->
+
+<div class="filter-group">
+
+<h3>
+
+Search
+
+</h3>
+
+<input
+type="text"
+id="productSearch"
+placeholder="Search products...">
+
+</div>
+
+<!-- Categories -->
+
+<div class="filter-group">
+
+<h3>
+
+Categories
+
+</h3>
+
+<label>
+
+<input
+type="checkbox"
+value="Fashion">
+
+Fashion
+
+</label>
+
+<label>
+
+<input
+type="checkbox"
+value="Electronics">
+
+Electronics
+
+</label>
+
+<label>
+
+<input
+type="checkbox"
+value="Beauty">
+
+Beauty
+
+</label>
+
+<label>
+
+<input
+type="checkbox"
+value="Home">
+
+Home & Living
+
+</label>
+
+<label>
+
+<input
+type="checkbox"
+value="Accessories">
+
+Accessories
+
+</label>
+
+</div>
+
+<!-- Price -->
+
+<div class="filter-group">
+
+<h3>
+
+Maximum Price
+
+</h3>
+
+<input
+
+type="range"
+
+min="20"
+
+max="1000"
+
+value="1000"
+
+id="priceRange">
+
+<p>
+
+Up to $
+
+<span id="priceValue">
+
+1000
+
+</span>
+
+</p>
+
+</div>
+
+<!-- Rating -->
+
+<div class="filter-group">
+
+<h3>
+
+Minimum Rating
+
+</h3>
+
+<select id="ratingFilter">
+
+<option value="0">
+
+All Ratings
+
+</option>
+
+<option value="5">
+
+★★★★★
+
+</option>
+
+<option value="4">
+
+★★★★+
+
+</option>
+
+<option value="3">
+
+★★★+
+
+</option>
+
+<option value="2">
+
+★★+
+
+</option>
+
+</select>
+
+</div>
+
+<button
+id="clearFilters"
+class="primary-btn">
+
+Clear Filters
+
+</button>
+
+</aside>
+
+<!-- Product Section Begins -->
+
+<main class="shop-products">
+<!-- SHOP HEADER -->
+
+<div class="shop-toolbar">
+
+    <div class="results">
+
+        <h3>
+            Trending Products
+        </h3>
+
+        <p>
+            <span id="productCount">24</span> Products Found
+        </p>
+
+    </div>
+
+    <div class="sort-box">
+
+        <label for="sortProducts">
+
+            Sort By
+
+        </label>
+
+        <select id="sortProducts">
+
+            <option value="featured">
+                Featured
+            </option>
+
+            <option value="popular">
+                Popularity
+            </option>
+
+            <option value="low">
+                Price: Low to High
+            </option>
+
+            <option value="high">
+                Price: High to Low
+            </option>
+
+            <option value="rating">
+                Highest Rated
+            </option>
+
+            <option value="newest">
+                Newest
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+<!-- PRODUCT GRID -->
+
+<div
+class="shop-grid"
+id="shopGrid">
+
+<!-- Products Render Here -->
+
+</div>
+
+<!-- EMPTY STATE -->
+
+<div
+id="emptyState"
+class="empty-state hidden">
+
+<i class="fa-solid fa-box-open"></i>
+
+<h2>
+
+No Products Found
+
+</h2>
+
+<p>
+
+Try changing your filters or search keywords.
+
+</p>
+
+<button
+class="primary-btn"
+id="resetSearch">
+
+Reset Search
+
+</button>
+
+</div>
+
+<!-- LOAD MORE -->
+
+<div class="load-more-container">
+
+<button
+class="secondary-btn"
+id="loadMore">
+
+Load More Products
+
+</button>
+
+</div>
+
+</main>
+
+</section>
+
+<!-- FEATURED BENEFITS -->
+
+<section class="features">
+
+<div class="feature">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>
+
+Fast Delivery
+
+</h3>
+
+<p>
+
+Same-day dispatch on thousands of products.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h3>
+
+Secure Payments
+
+</h3>
+
+<p>
+
+Encrypted checkout for complete peace of mind.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>
+
+Premium Quality
+
+</h3>
+
+<p>
+
+Only trusted brands and carefully selected items.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+<h3>
+
+Easy Returns
+
+</h3>
+
+<p>
+
+Simple returns within 30 days.
+
+</p>
+
+</div>
+
+</section>
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <h2>Get the Latest Deals</h2>
+
+    <p>
+        Subscribe to receive exclusive discounts, product launches, and special promotions.
+    </p>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email address"
+            required>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+                Cartiva
+            </h2>
+
+            <p>
+                Cartiva is your trusted destination for premium products,
+                fast delivery, secure shopping, and unbeatable prices.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="shop.html">Shop</a></li>
+
+                <li><a href="deals.html">Deals</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="account.html">My Account</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Customer Service -->
+
+        <div class="footer-column">
+
+            <h3>Customer Service</h3>
+
+            <ul>
+
+                <li><a href="#">FAQs</a></li>
+
+                <li><a href="#">Shipping Policy</a></li>
+
+                <li><a href="#">Returns</a></li>
+
+                <li><a href="#">Privacy Policy</a></li>
+
+                <li><a href="#">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>Email: oseniisrael25@gmail.com</p>
+
+            <p>Phone: +234 9113627102</p>
+
+            <p>Available 24/7</p>
+
+            <div class="socials">
+
+                <i class="fab fa-facebook-f"></i>
+
+                <i class="fab fa-instagram"></i>
+
+                <i class="fab fa-x-twitter"></i>
+
+                <i class="fab fa-linkedin-in"></i>
+
+                <i class="fab fa-youtube"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Payment Methods -->
+
+    <div class="payment-methods">
+
+        <i class="fab fa-cc-visa"></i>
+
+        <i class="fab fa-cc-mastercard"></i>
+
+        <i class="fab fa-cc-paypal"></i>
+
+        <i class="fab fa-cc-apple-pay"></i>
+
+        <i class="fab fa-google-pay"></i>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Cartiva. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script src="js/auth.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="css/product.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Shop premium products at Cartiva. Discover quality products, exclusive deals and fast delivery.">
+
+    <title>Product | Cartiva</title>
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="logo">
+
+            Cartiva
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+
+        <ul class="nav-links">
+
+            <li>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+                    Categories
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="deals.html">
+                    Deals
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!-- Navigation Actions -->
+
+        <div class="nav-actions">
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search products..."
+                    id="navSearch">
+
+                <i class="fa-solid fa-search"></i>
+
+            </div>
+
+
+            <!-- Account -->
+
+            <a
+                href="account.html"
+                aria-label="Account">
+
+                <i class="fa-regular fa-user"></i>
+
+            </a>
+
+
+            <!-- Wishlist -->
+
+            <a
+                href="wishlist.html"
+                class="nav-wishlist"
+                aria-label="Wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    id="wishlist-count">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+            <!-- Cart -->
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+                aria-label="Shopping cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cart-count">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                id="menuBtn"
+                class="menu-btn"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==========================================
+     BREADCRUMB
+========================================== -->
+
+<section class="product-breadcrumb">
+
+    <div class="breadcrumb-container">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <a href="shop.html">
+            Shop
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <span id="breadcrumbProduct">
+            Product
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PRODUCT DETAILS
+========================================== -->
+
+<main>
+
+<section class="product-details">
+
+    <div class="product-container">
+
+
+        <!-- ==================================
+             PRODUCT GALLERY
+        =================================== -->
+
+        <div class="product-gallery">
+
+
+            <!-- Main Image -->
+
+            <div class="main-product-image">
+
+                <span
+                    class="product-discount"
+                    id="productDiscount">
+
+                    -20%
+
+                </span>
+
+
+                <button
+                    class="gallery-wishlist"
+                    id="galleryWishlist"
+                    type="button"
+                    aria-label="Add product to wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <img
+                    id="mainProductImage"
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200"
+                    alt="Product">
+
+            </div>
+
+
+            <!-- Thumbnail Gallery -->
+
+            <div
+                class="product-thumbnails"
+                id="productThumbnails">
+
+                <button
+                    class="thumbnail active"
+                    type="button">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300"
+                        alt="Product view 1">
+
+                </button>
+
+
+                <button
+                    class="thumbnail"
+                    type="button">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"
+                        alt="Product view 2">
+
+                </button>
+
+
+                <button
+                    class="thumbnail"
+                    type="button">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=300"
+                        alt="Product view 3">
+
+                </button>
+
+
+                <button
+                    class="thumbnail"
+                    type="button">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300"
+                        alt="Product view 4">
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             PRODUCT INFORMATION
+        =================================== -->
+
+        <div class="product-information">
+
+
+            <!-- Category -->
+
+            <span
+                class="product-category"
+                id="productCategory">
+
+                Electronics
+
+            </span>
+
+
+            <!-- Product Name -->
+
+            <h1 id="productName">
+
+                Premium Wireless Headphones
+
+            </h1>
+
+
+            <!-- Rating -->
+
+            <div class="product-rating">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <strong id="productRating">
+
+                    4.8
+
+                </strong>
+
+                <a href="#reviews">
+
+                    128 Reviews
+
+                </a>
+
+            </div>
+
+
+            <!-- Price -->
+
+            <div class="product-price">
+
+                <strong id="productPrice">
+
+                    $129.99
+
+                </strong>
+
+                <span
+                    id="productOldPrice"
+                    class="old-price">
+
+                    $179.99
+
+                </span>
+
+                <span
+                    class="save-badge">
+
+                    Save 28%
+
+                </span>
+
+            </div>
+
+
+            <!-- Short Description -->
+
+            <p
+                class="product-description"
+                id="productDescription">
+
+                Experience powerful sound, premium comfort and
+                all-day battery life with these wireless headphones.
+                Designed for music lovers who want exceptional
+                audio quality wherever they go.
+
+            </p>
+
+
+            <!-- Availability -->
+
+            <div class="stock-status">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    In Stock
+                </span>
+
+                <small>
+                    — Ready to ship
+                </small>
+
+            </div>
+
+
+            <!-- Divider -->
+
+            <div class="product-divider"></div>
+
+
+            <!-- ==================================
+                 COLOR
+            =================================== -->
+
+            <div class="variant-section">
+
+                <div class="variant-heading">
+
+                    <strong>
+                        Color:
+                    </strong>
+
+                    <span id="selectedColor">
+                        Midnight Black
+                    </span>
+
+                </div>
+
+
+                <div class="color-options">
+
+                    <button
+                        class="color-option active"
+                        data-color="Midnight Black"
+                        style="background:#111827"
+                        aria-label="Midnight Black">
+                    </button>
+
+                    <button
+                        class="color-option"
+                        data-color="Silver"
+                        style="background:#cbd5e1"
+                        aria-label="Silver">
+                    </button>
+
+                    <button
+                        class="color-option"
+                        data-color="White"
+                        style="background:#ffffff"
+                        aria-label="White">
+                    </button>
+
+                    <button
+                        class="color-option"
+                        data-color="Blue"
+                        style="background:#2563eb"
+                        aria-label="Blue">
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 SIZE
+            =================================== -->
+
+            <div class="variant-section">
+
+                <div class="variant-heading">
+
+                    <strong>
+                        Size:
+                    </strong>
+
+                    <span id="selectedSize">
+                        Standard
+                    </span>
+
+                </div>
+
+
+                <div class="size-options">
+
+                    <button
+                        class="size-option active"
+                        data-size="Standard">
+
+                        Standard
+
+                    </button>
+
+                    <button
+                        class="size-option"
+                        data-size="Large">
+
+                        Large
+
+                    </button>
+
+                    <button
+                        class="size-option"
+                        data-size="XL">
+
+                        XL
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 QUANTITY
+            =================================== -->
+
+            <div class="quantity-section">
+
+                <strong>
+                    Quantity
+                </strong>
+
+                <div class="quantity-selector">
+
+                    <button
+                        id="quantityMinus"
+                        type="button"
+                        aria-label="Decrease quantity">
+
+                        <i class="fa-solid fa-minus"></i>
+
+                    </button>
+
+
+                    <input
+                        type="number"
+                        id="productQuantity"
+                        value="1"
+                        min="1"
+                        max="99"
+                        aria-label="Product quantity">
+
+
+                    <button
+                        id="quantityPlus"
+                        type="button"
+                        aria-label="Increase quantity">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 ACTIONS
+            =================================== -->
+
+            <div class="product-actions">
+
+                <button
+                    class="add-product-cart"
+                    id="addProductToCart"
+                    type="button">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+
+                <button
+                    class="buy-now-btn"
+                    id="buyNow"
+                    type="button">
+
+                    Buy Now
+
+                </button>
+
+            </div>
+
+
+            <!-- Wishlist -->
+
+            <button
+                class="product-wishlist-btn"
+                id="productWishlist"
+                type="button">
+
+                <i class="fa-regular fa-heart"></i>
+
+                Add to Wishlist
+
+            </button>
+
+
+            <!-- ==================================
+                 DELIVERY INFORMATION
+            =================================== -->
+
+            <div class="delivery-information">
+
+                <div class="delivery-item">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <div>
+
+                        <strong>
+                            Fast Delivery
+                        </strong>
+
+                        <p>
+                            Estimated delivery in 2–4 business days.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="delivery-item">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <strong>
+                            Secure Shopping
+                        </strong>
+
+                        <p>
+                            Your payment and personal information are protected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="delivery-item">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    <div>
+
+                        <strong>
+                            Easy Returns
+                        </strong>
+
+                        <p>
+                            Return eligible products within 30 days.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+     PRODUCT INFORMATION TABS
+========================================== -->
+
+<section class="product-tabs-section">
+
+    <div class="product-container">
+
+        <div class="product-tabs">
+
+            <button
+                class="product-tab active"
+                data-tab="description">
+
+                Description
+
+            </button>
+
+            <button
+                class="product-tab"
+                data-tab="specifications">
+
+                Specifications
+
+            </button>
+
+            <button
+                class="product-tab"
+                data-tab="shipping">
+
+                Shipping & Returns
+
+            </button>
+
+        </div>
+
+
+        <!-- Description -->
+
+        <div
+            class="tab-content active"
+            id="description">
+
+            <h2>
+                Premium sound. Designed for everyday life.
+            </h2>
+
+            <p>
+                Enjoy immersive audio with the Cartiva Premium
+                Wireless Headphones. Built for music, podcasts,
+                gaming and everyday entertainment, these headphones
+                combine powerful sound with a comfortable,
+                lightweight design.
+            </p>
+
+            <p>
+                The advanced wireless connection provides a stable
+                listening experience while the long-lasting battery
+                keeps you connected throughout your day.
+            </p>
+
+            <ul class="product-highlights">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    High-quality wireless audio
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Up to 40 hours of battery life
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Comfortable over-ear design
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Built-in microphone
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Fast USB-C charging
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Specifications -->
+
+        <div
+            class="tab-content"
+            id="specifications">
+
+            <h2>
+                Product Specifications
+            </h2>
+
+            <div class="specifications-table">
+
+                <div class="spec-row">
+
+                    <span>
+                        Brand
+                    </span>
+
+                    <strong>
+                        Cartiva
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Product Type
+                    </span>
+
+                    <strong>
+                        Wireless Headphones
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Connectivity
+                    </span>
+
+                    <strong>
+                        Bluetooth 5.3
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Battery Life
+                    </span>
+
+                    <strong>
+                        Up to 40 hours
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Charging
+                    </span>
+
+                    <strong>
+                        USB-C
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Weight
+                    </span>
+
+                    <strong>
+                        265g
+                    </strong>
+
+                </div>
+
+                <div class="spec-row">
+
+                    <span>
+                        Warranty
+                    </span>
+
+                    <strong>
+                        12 Months
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Shipping -->
+
+        <div
+            class="tab-content"
+            id="shipping">
+
+            <h2>
+                Shipping & Returns
+            </h2>
+
+            <div class="shipping-content">
+
+                <div>
+
+                    <h3>
+                        Delivery
+                    </h3>
+
+                    <p>
+                        Orders are processed within 1–2 business
+                        days. Delivery usually takes 2–4 business
+                        days depending on your location.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Returns
+                    </h3>
+
+                    <p>
+                        Eligible products can be returned within
+                        30 days of delivery. Products must be unused
+                        and returned in their original condition.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Need Help?
+                    </h3>
+
+                    <p>
+                        Our customer support team is available
+                        to help with orders, delivery and returns.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     REVIEWS
+========================================== -->
+
+<section
+    class="reviews-section"
+    id="reviews">
+
+    <div class="product-container">
+
+        <div class="section-heading">
+
+            <span>
+                CUSTOMER REVIEWS
+            </span>
+
+            <h2>
+                What Customers Are Saying
+            </h2>
+
+            <p>
+                See what other Cartiva shoppers think about this product.
+            </p>
+
+        </div>
+
+
+        <!-- Review Summary -->
+
+        <div class="review-summary">
+
+            <div class="overall-rating">
+
+                <strong>
+                    4.8
+                </strong>
+
+                <div class="large-stars">
+                    ★★★★★
+                </div>
+
+                <span>
+                    Based on 128 reviews
+                </span>
+
+            </div>
+
+
+            <div class="rating-bars">
+
+                <div class="rating-bar">
+
+                    <span>5</span>
+
+                    <div>
+                        <span style="width:82%"></span>
+                    </div>
+
+                    <small>82%</small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>4</span>
+
+                    <div>
+                        <span style="width:12%"></span>
+                    </div>
+
+                    <small>12%</small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>3</span>
+
+                    <div>
+                        <span style="width:4%"></span>
+                    </div>
+
+                    <small>4%</small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>2</span>
+
+                    <div>
+                        <span style="width:1%"></span>
+                    </div>
+
+                    <small>1%</small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>1</span>
+
+                    <div>
+                        <span style="width:1%"></span>
+                    </div>
+
+                    <small>1%</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Review Cards -->
+
+        <div class="reviews-grid">
+
+
+            <article class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-avatar">
+                        JD
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            James Davis
+                        </h3>
+
+                        <small>
+                            Verified Purchase
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <h4>
+                    Excellent sound quality
+                </h4>
+
+                <p>
+                    The sound is much better than I expected for
+                    the price. They're comfortable enough to wear
+                    for several hours and the battery lasts forever.
+                </p>
+
+                <span class="review-date">
+                    August 12, 2026
+                </span>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-avatar">
+                        AM
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Amanda Miller
+                        </h3>
+
+                        <small>
+                            Verified Purchase
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <h4>
+                    Comfortable and stylish
+                </h4>
+
+                <p>
+                    I love the design. They feel premium and
+                    the noise isolation is great when I'm working.
+                </p>
+
+                <span class="review-date">
+                    August 8, 2026
+                </span>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-avatar">
+                        RK
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ryan Kim
+                        </h3>
+
+                        <small>
+                            Verified Purchase
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="review-stars">
+                    ★★★★☆
+                </div>
+
+                <h4>
+                    Great headphones
+                </h4>
+
+                <p>
+                    Very good overall. The battery life is impressive
+                    and pairing with my phone was incredibly easy.
+                </p>
+
+                <span class="review-date">
+                    July 29, 2026
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <button
+            class="secondary-btn review-button"
+            id="loadReviews">
+
+            Load More Reviews
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     RELATED PRODUCTS
+========================================== -->
+
+<section class="related-products">
+
+    <div class="product-container">
+
+        <div class="section-heading">
+
+            <span>
+                YOU MAY ALSO LIKE
+            </span>
+
+            <h2>
+                Related Products
+            </h2>
+
+            <p>
+                Complete your shopping with these customer favourites.
+            </p>
+
+        </div>
+
+
+        <div
+            class="related-product-grid"
+            id="relatedProducts">
+
+            <!-- Related products rendered by JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+     NEWSLETTER
+========================================== -->
+
+<section class="newsletter">
+
+    <div class="newsletter-container">
+
+        <div class="newsletter-content">
+
+            <span class="newsletter-label">
+                CARTIVA INSIDER
+            </span>
+
+            <h2>
+                Get the Latest Deals
+            </h2>
+
+            <p>
+                Join thousands of shoppers and be the first to
+                know about new products, exclusive offers and
+                limited-time deals.
+            </p>
+
+        </div>
+
+
+        <form
+            id="newsletterForm"
+            class="newsletter-form">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required>
+
+            <button type="submit">
+
+                Subscribe
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <a
+                href="index.html"
+                class="footer-logo">
+
+                Cartiva
+
+            </a>
+
+            <p>
+                Your trusted destination for premium products,
+                everyday essentials and exceptional shopping
+                experiences.
+            </p>
+
+
+            <!-- Social Media -->
+
+            <div class="socials">
+
+                <a
+                    href="#"
+                    aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="X">
+
+                    <i class="fab fa-x-twitter"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok">
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="shop.html">
+                        All Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Fashion
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Electronics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Beauty
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Home & Living
+                    </a>
+                </li>
+
+                <li>
+                    <a href="deals.html">
+                        Deals
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CUSTOMER SERVICE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Service
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        FAQs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping Information
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns & Refunds
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Order Tracking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Help Center
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="about.html">
+                        About Cartiva
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Careers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cookie Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="payment-methods">
+
+            <span>
+                We accept
+            </span>
+
+            <i class="fab fa-cc-visa"></i>
+
+            <i class="fab fa-cc-mastercard"></i>
+
+            <i class="fab fa-cc-paypal"></i>
+
+            <i class="fab fa-apple-pay"></i>
+
+            <i class="fab fa-google-pay"></i>
+
+        </div>
+
+
+        <p>
+
+            © 2026 Cartiva.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==========================================
+     TOAST
+========================================== -->
+
+<div
+    id="productToast"
+    class="product-toast"
+    role="status"
+    aria-live="polite">
+
+</div>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="js/auth.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+
+</html>

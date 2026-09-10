@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account | Cartiva</title>
+
+    <meta
+        name="description"
+        content="Manage your Cartiva account, orders, wishlist, addresses and payment methods."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        :root {
+
+            --black: #111111;
+
+            --gray: #6b6b6b;
+
+            --light: #f6f6f3;
+
+            --border: #e7e7e3;
+
+            --white: #ffffff;
+
+            --orange: #ff5a1f;
+
+            --orange-dark: #e84d17;
+
+            --green: #168a4a;
+
+        }
+
+
+        body {
+
+            background: #f8f8f6;
+
+            color: var(--black);
+
+            font-family: "DM Sans", sans-serif;
+
+            min-height: 100vh;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        button,
+        input {
+
+            font-family: inherit;
+
+        }
+
+
+        /* ==========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+
+            height: 82px;
+
+            background: white;
+
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .nav-inner {
+
+            width: min(1400px, 92%);
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: -1.5px;
+
+        }
+
+
+        .logo span {
+
+            color: var(--orange);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .nav-links a {
+
+            color: #666;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: .2s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--black);
+
+        }
+
+
+        .nav-links a.active {
+
+            color: var(--orange);
+
+        }
+
+
+        .nav-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+        .nav-action {
+
+            width: 40px;
+
+            height: 40px;
+
+            border: none;
+
+            background: transparent;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            transition: .2s ease;
+
+        }
+
+
+        .nav-action:hover {
+
+            background: var(--light);
+
+        }
+
+
+        .cart-wrapper {
+
+            position: relative;
+
+        }
+
+
+        .cart-count {
+
+            position: absolute;
+
+            top: 0;
+
+            right: 0;
+
+            min-width: 17px;
+
+            height: 17px;
+
+            padding: 0 4px;
+
+            border-radius: 20px;
+
+            background: var(--orange);
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .mobile-menu {
+
+            display: none;
+
+        }
+
+
+        /* ==========================
+           PAGE
+        ========================== */
+
+        .page {
+
+            width: min(1250px, 92%);
+
+            margin: 55px auto 90px;
+
+        }
+
+
+        .page-header {
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--orange);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .page-header h1 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(36px, 5vw, 52px);
+
+            letter-spacing: -2px;
+
+            margin-top: 8px;
+
+        }
+
+
+        .page-header p {
+
+            color: var(--gray);
+
+            font-size: 14px;
+
+            margin-top: 10px;
+
+        }
+
+
+        /* ==========================
+           ACCOUNT LAYOUT
+        ========================== */
+
+        .account-layout {
+
+            display: grid;
+
+            grid-template-columns: 250px 1fr;
+
+            gap: 25px;
+
+        }
+
+
+        /* ==========================
+           SIDEBAR
+        ========================== */
+
+        .sidebar {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 15px;
+
+            height: fit-content;
+
+        }
+
+
+        .profile-mini {
+
+            padding: 20px 15px;
+
+            border-bottom: 1px solid var(--border);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .avatar {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 50%;
+
+            background: #fff0e9;
+
+            color: var(--orange);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 19px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .profile-mini h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 15px;
+
+        }
+
+
+        .profile-mini p {
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+            margin-top: 3px;
+
+        }
+
+
+        .side-btn {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            padding: 13px 12px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-align: left;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            color: #666;
+
+            cursor: pointer;
+
+            transition: .2s ease;
+
+        }
+
+
+        .side-btn i {
+
+            width: 18px;
+
+            text-align: center;
+
+        }
+
+
+        .side-btn:hover {
+
+            background: var(--light);
+
+            color: var(--black);
+
+        }
+
+
+        .side-btn.active {
+
+            background: #fff0e9;
+
+            color: var(--orange);
+
+        }
+
+
+        .logout-btn {
+
+            margin-top: 10px;
+
+            color: #d64545;
+
+        }
+
+
+        /* ==========================
+           CONTENT
+        ========================== */
+
+        .account-content {
+
+            min-width: 0;
+
+        }
+
+
+        .tab {
+
+            display: none;
+
+        }
+
+
+        .tab.active {
+
+            display: block;
+
+            animation: fadeIn .3s ease;
+
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(8px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        .card {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .card-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .card-header h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 20px;
+
+            letter-spacing: -.5px;
+
+        }
+
+
+        .card-header p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            margin-top: 4px;
+
+        }
+
+
+        .edit-btn {
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            padding: 9px 14px;
+
+            border-radius: 9px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+        }
+
+
+        .edit-btn:hover {
+
+            border-color: var(--orange);
+
+            color: var(--orange);
+
+        }
+
+
+        /* ==========================
+           DASHBOARD
+        ========================== */
+
+        .welcome-card {
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(255,90,31,.15),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f5f5f1,
+                    #ecece7
+                );
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .welcome-card h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 27px;
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .welcome-card p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+            margin-top: 7px;
+
+        }
+
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .stat {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+        }
+
+
+        .stat i {
+
+            color: var(--orange);
+
+            font-size: 16px;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 23px;
+
+        }
+
+
+        .stat span {
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+        }
+
+
+        /* ==========================
+           PROFILE
+        ========================== */
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+        }
+
+
+        .info-item label {
+
+            display: block;
+
+            color: #999;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            margin-bottom: 6px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .5px;
+
+        }
+
+
+        .info-item p {
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* ==========================
+           ORDERS
+        ========================== */
+
+        .order {
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 17px;
+
+            margin-bottom: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+        }
+
+
+        .order-info strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+
+        .order-info span {
+
+            display: block;
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+            margin-top: 4px;
+
+        }
+
+
+        .order-status {
+
+            padding: 6px 10px;
+
+            border-radius: 20px;
+
+            background: #eaf8f0;
+
+            color: var(--green);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* ==========================
+           ADDRESS
+        ========================== */
+
+        .address-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .address {
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 18px;
+
+        }
+
+
+        .address h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .address p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* ==========================
+           PAYMENT
+        ========================== */
+
+        .payment {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 17px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .payment-icon {
+
+            width: 45px;
+
+            height: 32px;
+
+            border-radius: 6px;
+
+            background: #111;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 10px;
+
+        }
+
+
+        .payment-info strong {
+
+            display: block;
+
+            font-size: 12px;
+
+        }
+
+
+        .payment-info span {
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+        }
+
+
+        /* ==========================
+           WISHLIST
+        ========================== */
+
+        .empty {
+
+            padding: 55px 20px;
+
+            text-align: center;
+
+            border: 1px dashed var(--border);
+
+            border-radius: 15px;
+
+        }
+
+
+        .empty i {
+
+            color: #ccc;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .empty h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 17px;
+
+        }
+
+
+        .empty p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            margin-top: 6px;
+
+        }
+
+
+        .shop-btn {
+
+            display: inline-flex;
+
+            margin-top: 18px;
+
+            padding: 11px 18px;
+
+            border-radius: 9px;
+
+            background: var(--orange);
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* ==========================
+           MOBILE
+        ========================== */
+
+        @media(max-width: 850px) {
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+
+            .mobile-menu {
+
+                display: flex;
+
+            }
+
+
+            .account-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .sidebar {
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                gap: 5px;
+
+            }
+
+
+            .profile-mini {
+
+                width: 100%;
+
+            }
+
+
+            .side-btn {
+
+                width: auto;
+
+                flex: 1 1 45%;
+
+            }
+
+
+            .logout-btn {
+
+                margin-top: 0;
+
+            }
+
+        }
+
+
+        @media(max-width: 550px) {
+
+            .navbar {
+
+                height: 70px;
+
+            }
+
+
+            .page {
+
+                width: 94%;
+
+                margin-top: 35px;
+
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .info-grid,
+
+            .address-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .card {
+
+                padding: 20px;
+
+            }
+
+
+            .order {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .side-btn {
+
+                flex: 1 1 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<header class="navbar">
+
+    <div class="nav-inner">
+
+
+        <a href="index.html" class="logo">
+
+            Cartiva<span>.</span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+
+            <a
+                href="account.html"
+                class="nav-action"
+                aria-label="Account"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="nav-action cart-wrapper"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <button
+                class="nav-action mobile-menu"
+                id="mobileMenu"
+                aria-label="Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     PAGE
+========================================== -->
+
+<main class="page">
+
+
+    <div class="page-header">
+
+        <span class="eyebrow">
+            MY CARTIVA
+        </span>
+
+        <h1>
+            My Account
+        </h1>
+
+        <p>
+            Manage your profile, orders, wishlist and
+            shopping preferences.
+        </p>
+
+    </div>
+
+
+
+    <div class="account-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="sidebar">
+
+
+            <div class="profile-mini">
+
+                <div class="avatar">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </div>
+
+                <h3 id="sideName">
+                    Guest Shopper
+                </h3>
+
+                <p id="sideEmail">
+                    Sign in to your account
+                </p>
+
+            </div>
+
+
+            <button
+                class="side-btn active"
+                data-tab="dashboard"
+            >
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </button>
+
+
+            <button
+                class="side-btn"
+                data-tab="profile"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+                Profile
+
+            </button>
+
+
+            <button
+                class="side-btn"
+                data-tab="orders"
+            >
+
+                <i class="fa-solid fa-box"></i>
+
+                Orders
+
+            </button>
+
+
+            <button
+                class="side-btn"
+                data-tab="wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                Wishlist
+
+            </button>
+
+
+            <button
+                class="side-btn"
+                data-tab="addresses"
+            >
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Saved Addresses
+
+            </button>
+
+
+            <button
+                class="side-btn"
+                data-tab="payments"
+            >
+
+                <i class="fa-regular fa-credit-card"></i>
+
+                Payment Methods
+
+            </button>
+
+
+            <button
+                class="side-btn logout-btn"
+                id="logoutBtn"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+
+        </aside>
+
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <section class="account-content">
+
+
+
+            <!-- ================================
+                 DASHBOARD
+            ================================= -->
+
+            <div
+                class="tab active"
+                id="dashboard"
+            >
+
+                <div class="welcome-card">
+
+                    <h2 id="welcomeName">
+                        Welcome to Cartiva 👋
+                    </h2>
+
+                    <p>
+                        Here's a quick look at your
+                        Cartiva activity.
+                    </p>
+
+
+                    <div class="stats">
+
+
+                        <div class="stat">
+
+                            <i class="fa-solid fa-box"></i>
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Total Orders
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                            <strong id="wishlistCount">
+                                0
+                            </strong>
+
+                            <span>
+                                Wishlist Items
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Active Deliveries
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Orders
+                            </h2>
+
+                            <p>
+                                Your latest Cartiva purchases
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="recentOrders">
+
+                        <div class="empty">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <h3>
+                                No orders yet
+                            </h3>
+
+                            <p>
+                                Your recent orders will appear here.
+                            </p>
+
+                            <a
+                                href="shop.html"
+                                class="shop-btn"
+                            >
+                                Start Shopping
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================
+                 PROFILE
+            ================================= -->
+
+            <div
+                class="tab"
+                id="profile"
+            >
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Profile Information
+                            </h2>
+
+                            <p>
+                                Your personal account details
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            id="editProfile"
+                        >
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+
+                    <div class="info-grid">
+
+
+                        <div class="info-item">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <p id="profileName">
+                                Guest Shopper
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <p id="profileEmail">
+                                Not provided
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <label>
+                                Phone
+                            </label>
+
+                            <p id="profilePhone">
+                                Not provided
+                            </p>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <label>
+                                Member Since
+                            </label>
+
+                            <p>
+                                August 2026
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================
+                 ORDERS
+            ================================= -->
+
+            <div
+                class="tab"
+                id="orders"
+            >
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                My Orders
+                            </h2>
+
+                            <p>
+                                Track and manage your purchases
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="ordersList">
+
+                        <div class="empty">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <h3>
+                                No orders found
+                            </h3>
+
+                            <p>
+                                You haven't placed any orders yet.
+                            </p>
+
+                            <a
+                                href="shop.html"
+                                class="shop-btn"
+                            >
+                                Browse Products
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================
+                 WISHLIST
+            ================================= -->
+
+            <div
+                class="tab"
+                id="wishlist"
+            >
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                My Wishlist
+                            </h2>
+
+                            <p>
+                                Products you've saved
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="wishlistItems">
+
+                        <div class="empty">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                            <h3>
+                                Your wishlist is empty
+                            </h3>
+
+                            <p>
+                                Save products you love and
+                                they'll appear here.
+                            </p>
+
+                            <a
+                                href="shop.html"
+                                class="shop-btn"
+                            >
+                                Explore Products
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================
+                 ADDRESSES
+            ================================= -->
+
+            <div
+                class="tab"
+                id="addresses"
+            >
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Saved Addresses
+                            </h2>
+
+                            <p>
+                                Manage your delivery addresses
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            id="addAddress"
+                        >
+                            + Add Address
+                        </button>
+
+                    </div>
+
+
+                    <div class="address-grid">
+
+
+                        <div class="address">
+
+                            <h3>
+                                Home
+                            </h3>
+
+                            <p>
+                                No address saved yet.
+                            </p>
+
+                        </div>
+
+
+                        <div class="address">
+
+                            <h3>
+                                Work
+                            </h3>
+
+                            <p>
+                                No address saved yet.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================
+                 PAYMENTS
+            ================================= -->
+
+            <div
+                class="tab"
+                id="payments"
+            >
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Payment Methods
+                            </h2>
+
+                            <p>
+                                Your saved payment options
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment">
+
+                        <div class="payment-icon">
+                            CARD
+                        </div>
+
+                        <div class="payment-info">
+
+                            <strong>
+                                No saved payment methods
+                            </strong>
+
+                            <span>
+                                Your payment methods will
+                                appear here.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+    /* ==========================================
+       TAB NAVIGATION
+    ========================================== */
+
+    const sideButtons =
+        document.querySelectorAll(".side-btn[data-tab]");
+
+
+    const tabs =
+        document.querySelectorAll(".tab");
+
+
+    sideButtons.forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const target =
+                    button.dataset.tab;
+
+
+                sideButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+                tabs.forEach(tab => {
+
+                    tab.classList.remove("active");
+
+                });
+
+
+                button.classList.add("active");
+
+
+                const selectedTab =
+                    document.getElementById(target);
+
+
+                if(selectedTab){
+
+                    selectedTab.classList.add("active");
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+    /* ==========================================
+       CART COUNT
+    ========================================== */
+
+    function updateCartCount(){
+
+        const cartCount =
+            document.getElementById("cartCount");
+
+
+        try {
+
+            const cart =
+                JSON.parse(
+                    localStorage.getItem(
+                        "cartivaCart"
+                    ) || "[]"
+                );
+
+
+            let total = 0;
+
+
+            cart.forEach(item => {
+
+                total +=
+                    Number(item.quantity) || 1;
+
+            });
+
+
+            cartCount.textContent = total;
+
+        }
+
+        catch(error){
+
+            cartCount.textContent = "0";
+
+        }
+
+    }
+
+
+    updateCartCount();
+
+
+
+    /* ==========================================
+       WISHLIST COUNT
+    ========================================== */
+
+    function updateWishlistCount(){
+
+        const wishlistCount =
+            document.getElementById(
+                "wishlistCount"
+            );
+
+
+        try {
+
+            const wishlist =
+                JSON.parse(
+                    localStorage.getItem(
+                        "cartivaWishlist"
+                    ) || "[]"
+                );
+
+
+            wishlistCount.textContent =
+                wishlist.length;
+
+        }
+
+        catch(error){
+
+            wishlistCount.textContent = "0";
+
+        }
+
+    }
+
+
+    updateWishlistCount();
+
+
+
+    /* ==========================================
+       LOAD USER PROFILE
+    ========================================== */
+
+    function loadProfile(){
+
+        try {
+
+            const user =
+                JSON.parse(
+                    localStorage.getItem(
+                        "cartivaUser"
+                    )
+                );
+
+
+            if(!user){
+
+                return;
+
+            }
+
+
+            const name =
+                user.name || "Cartiva Shopper";
+
+
+            const email =
+                user.email || "No email provided";
+
+
+            document.getElementById(
+                "sideName"
+            ).textContent = name;
+
+
+            document.getElementById(
+                "sideEmail"
+            ).textContent = email;
+
+
+            document.getElementById(
+                "welcomeName"
+            ).textContent =
+                `Welcome back, ${name} 👋`;
+
+
+            document.getElementById(
+                "profileName"
+            ).textContent = name;
+
+
+            document.getElementById(
+                "profileEmail"
+            ).textContent = email;
+
+
+            if(user.phone){
+
+                document.getElementById(
+                    "profilePhone"
+                ).textContent = user.phone;
+
+            }
+
+        }
+
+        catch(error){
+
+            console.log(
+                "No saved user profile."
+            );
+
+        }
+
+    }
+
+
+    loadProfile();
+
+
+
+    /* ==========================================
+       LOGOUT
+    ========================================== */
+
+    const logoutBtn =
+        document.getElementById(
+            "logoutBtn"
+        );
+
+
+    logoutBtn.addEventListener(
+        "click",
+        () => {
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to log out?"
+                );
+
+
+            if(!confirmLogout){
+
+                return;
+
+            }
+
+
+            localStorage.removeItem(
+                "cartivaUser"
+            );
+
+
+            alert(
+                "You have been logged out."
+            );
+
+
+            window.location.href =
+                "index.html";
+
+        }
+    );
+
+
+
+    /* ==========================================
+       EDIT PROFILE
+    ========================================== */
+
+    const editProfile =
+        document.getElementById(
+            "editProfile"
+        );
+
+
+    editProfile.addEventListener(
+        "click",
+        () => {
+
+            const currentName =
+                document.getElementById(
+                    "profileName"
+                ).textContent;
+
+
+            const currentEmail =
+                document.getElementById(
+                    "profileEmail"
+                ).textContent;
+
+
+            const name =
+                prompt(
+                    "Enter your full name:",
+                    currentName
+                );
+
+
+            if(name === null){
+
+                return;
+
+            }
+
+
+            const email =
+                prompt(
+                    "Enter your email:",
+                    currentEmail
+                );
+
+
+            if(email === null){
+
+                return;
+
+            }
+
+
+            const user = {
+
+                name: name.trim() ||
+                    "Cartiva Shopper",
+
+                email:
+                    email.trim() ||
+                    "No email provided"
+
+            };
+
+
+            localStorage.setItem(
+                "cartivaUser",
+                JSON.stringify(user)
+            );
+
+
+            loadProfile();
+
+
+            alert(
+                "Profile updated successfully."
+            );
+
+        }
+    );
+
+
+
+    /* ==========================================
+       ADD ADDRESS
+    ========================================== */
+
+    const addAddress =
+        document.getElementById(
+            "addAddress"
+        );
+
+
+    addAddress.addEventListener(
+        "click",
+        () => {
+
+            const address =
+                prompt(
+                    "Enter your delivery address:"
+                );
+
+
+            if(!address){
+
+                return;
+
+            }
+
+
+            const addresses =
+                JSON.parse(
+                    localStorage.getItem(
+                        "cartivaAddresses"
+                    ) || "[]"
+                );
+
+
+            addresses.push(address);
+
+
+            localStorage.setItem(
+                "cartivaAddresses",
+                JSON.stringify(addresses)
+            );
+
+
+            alert(
+                "Address saved successfully."
+            );
+
+        }
+    );
+
+
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const mobileMenu =
+        document.getElementById(
+            "mobileMenu"
+        );
+
+
+    const navLinks =
+        document.querySelector(
+            ".nav-links"
+        );
+
+
+    mobileMenu?.addEventListener(
+        "click",
+        () => {
+
+            if(
+                navLinks.style.display ===
+                "flex"
+            ){
+
+                navLinks.style.display =
+                    "none";
+
+            }
+
+            else {
+
+                navLinks.style.display =
+                    "flex";
+
+                navLinks.style.flexDirection =
+                    "column";
+
+                navLinks.style.position =
+                    "absolute";
+
+                navLinks.style.top =
+                    "70px";
+
+                navLinks.style.left =
+                    "0";
+
+                navLinks.style.right =
+                    "0";
+
+                navLinks.style.background =
+                    "white";
+
+                navLinks.style.padding =
+                    "20px";
+
+                navLinks.style.borderBottom =
+                    "1px solid #e7e7e3";
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

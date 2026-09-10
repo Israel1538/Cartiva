@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Deals | Cartiva</title>
+
+    <meta
+        name="description"
+        content="Discover the latest Cartiva deals, exclusive discounts and limited-time offers."
+    >
+
+    <!-- Main Cartiva CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Deals Page CSS -->
+    <link
+        rel="stylesheet"
+        href="css/deals.css"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="deals-header">
+
+    <nav class="deals-navbar">
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="deals-logo"
+        >
+            Cartiva
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <div class="deals-nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a
+                href="deals.html"
+                class="active"
+            >
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="deals-nav-actions">
+
+            <a
+                href="shop.html"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+
+            <a
+                href="account.html"
+                aria-label="Account"
+            >
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="deals-cart"
+                aria-label="Shopping cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="deals-mobile-menu"
+            id="dealsMobileMenu"
+            aria-label="Open navigation menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <div
+        class="deals-mobile-nav"
+        id="dealsMobileNav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="shop.html">
+            Shop
+        </a>
+
+        <a href="index.html#categories">
+            Categories
+        </a>
+
+        <a
+            href="deals.html"
+            class="active"
+        >
+            Deals
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="account.html">
+            Account
+        </a>
+
+        <a href="cart.html">
+            Cart
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     DEALS HERO
+===================================================== -->
+
+<section class="deals-hero">
+
+    <div class="deals-container">
+
+        <div class="deals-hero-content">
+
+            <span class="deals-eyebrow">
+
+                <i class="fa-solid fa-fire"></i>
+
+                LIMITED-TIME OFFERS
+
+            </span>
+
+
+            <h1>
+
+                Great products.
+                <span>Better prices.</span>
+
+            </h1>
+
+
+            <p>
+
+                Save more on products you'll love.
+                Discover Cartiva's hand-picked deals
+                before they're gone.
+
+            </p>
+
+
+            <div class="deals-hero-buttons">
+
+                <a
+                    href="#featured-deals"
+                    class="deals-primary-button"
+                >
+
+                    Shop Deals
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="shop.html"
+                    class="deals-secondary-button"
+                >
+
+                    Browse All Products
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO OFFER CARD -->
+
+        <div class="deals-hero-offer">
+
+            <div class="hero-offer-glow"></div>
+
+
+            <div class="hero-offer-content">
+
+                <span>
+                    UP TO
+                </span>
+
+                <strong>
+                    50%
+                </strong>
+
+                <p>
+                    OFF
+                </p>
+
+
+                <div class="hero-offer-line"></div>
+
+
+                <small>
+                    Selected products
+                </small>
+
+            </div>
+
+
+            <div class="hero-floating-tag">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Flash Sale
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="deal-countdown-section">
+
+    <div class="deals-container">
+
+        <div class="countdown-card">
+
+            <div class="countdown-information">
+
+                <span>
+                    FLASH SALE
+                </span>
+
+                <h2>
+                    Deals ending soon
+                </h2>
+
+                <p>
+                    Grab your favorites before
+                    these prices disappear.
+                </p>
+
+            </div>
+
+
+            <div
+                class="countdown"
+                id="countdown"
+            >
+
+                <div class="countdown-box">
+
+                    <strong id="days">
+                        00
+                    </strong>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+
+                <div class="countdown-separator">
+                    :
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <span>
+                        Hours
+                    </span>
+
+                </div>
+
+
+                <div class="countdown-separator">
+                    :
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <span>
+                        Minutes
+                    </span>
+
+                </div>
+
+
+                <div class="countdown-separator">
+                    :
+                </div>
+
+
+                <div class="countdown-box">
+
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <span>
+                        Seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DEAL CATEGORIES
+===================================================== -->
+
+<section class="deal-categories">
+
+    <div class="deals-container">
+
+        <div class="deals-section-heading">
+
+            <div>
+
+                <span>
+                    SHOP BY CATEGORY
+                </span>
+
+                <h2>
+                    Find your kind of deal
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="deal-category-buttons">
+
+            <button
+                class="deal-filter active"
+                data-category="all"
+            >
+                All Deals
+            </button>
+
+
+            <button
+                class="deal-filter"
+                data-category="fashion"
+            >
+                Fashion
+            </button>
+
+
+            <button
+                class="deal-filter"
+                data-category="electronics"
+            >
+                Electronics
+            </button>
+
+
+            <button
+                class="deal-filter"
+                data-category="beauty"
+            >
+                Beauty
+            </button>
+
+
+            <button
+                class="deal-filter"
+                data-category="home"
+            >
+                Home & Living
+            </button>
+
+
+            <button
+                class="deal-filter"
+                data-category="accessories"
+            >
+                Accessories
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED DEALS
+===================================================== -->
+
+<section
+    class="featured-deals"
+    id="featured-deals"
+>
+
+    <div class="deals-container">
+
+        <div class="deals-section-heading">
+
+            <div>
+
+                <span>
+                    TODAY'S BEST DEALS
+                </span>
+
+                <h2>
+                    Deals worth grabbing
+                </h2>
+
+            </div>
+
+
+            <a
+                href="shop.html"
+                class="view-all-deals"
+            >
+
+                View all products
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+
+        <div
+            class="deals-product-grid"
+            id="dealsProductGrid"
+        >
+
+            <!-- PRODUCTS ARE GENERATED BY JAVASCRIPT -->
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="deals-empty"
+            id="dealsEmpty"
+        >
+
+            <div class="deals-empty-icon">
+
+                <i class="fa-solid fa-tag"></i>
+
+            </div>
+
+            <h3>
+                No deals found
+            </h3>
+
+            <p>
+                Try another category.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BIG PROMOTIONAL BANNER
+===================================================== -->
+
+<section class="deals-promo">
+
+    <div class="deals-container">
+
+        <div class="deals-promo-card">
+
+            <div class="deals-promo-content">
+
+                <span>
+                    CARTIVA EXCLUSIVE
+                </span>
+
+                <h2>
+                    Upgrade your everyday.
+                </h2>
+
+                <p>
+                    Get up to 40% off selected
+                    lifestyle essentials.
+                </p>
+
+
+                <a
+                    href="shop.html"
+                    class="deals-promo-button"
+                >
+
+                    Explore Collection
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="promo-decoration">
+
+                <div class="promo-circle circle-one"></div>
+
+                <div class="promo-circle circle-two"></div>
+
+                <div class="promo-bag">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY SHOP DEALS
+===================================================== -->
+
+<section class="deal-benefits">
+
+    <div class="deals-container">
+
+        <div class="deals-section-heading centered">
+
+            <span>
+                SHOP WITH CONFIDENCE
+            </span>
+
+            <h2>
+                Deals without the compromise
+            </h2>
+
+        </div>
+
+
+        <div class="deal-benefit-grid">
+
+
+            <article class="deal-benefit">
+
+                <div class="deal-benefit-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>
+                    Secure Checkout
+                </h3>
+
+                <p>
+                    Your payment information is
+                    protected throughout checkout.
+                </p>
+
+            </article>
+
+
+
+            <article class="deal-benefit">
+
+                <div class="deal-benefit-icon">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+                <h3>
+                    Fast Delivery
+                </h3>
+
+                <p>
+                    Get your favorite deals delivered
+                    quickly and reliably.
+                </p>
+
+            </article>
+
+
+
+            <article class="deal-benefit">
+
+                <div class="deal-benefit-icon">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                </div>
+
+                <h3>
+                    Easy Returns
+                </h3>
+
+                <p>
+                    Changed your mind? Our return
+                    process is simple.
+                </p>
+
+            </article>
+
+
+
+            <article class="deal-benefit">
+
+                <div class="deal-benefit-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <h3>
+                    Helpful Support
+                </h3>
+
+                <p>
+                    Our support team is ready to
+                    help whenever you need us.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="deals-newsletter">
+
+    <div class="deals-container">
+
+        <div class="newsletter-inner">
+
+            <div>
+
+                <span>
+                    DON'T MISS A DEAL
+                </span>
+
+                <h2>
+                    Get Cartiva deals in your inbox.
+                </h2>
+
+                <p>
+                    Be the first to know about
+                    discounts, new arrivals and
+                    exclusive offers.
+                </p>
+
+            </div>
+
+
+            <form
+                id="dealsNewsletterForm"
+                class="newsletter-form"
+            >
+
+                <div class="newsletter-input">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email"
+                        aria-label="Email address"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="newsletter-message"
+                id="newsletterMessage"
+            ></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="deals-footer">
+
+    <div class="deals-container deals-footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="deals-footer-brand">
+
+            <a
+                href="index.html"
+                class="deals-logo"
+            >
+                Cartiva
+            </a>
+
+            <p>
+                Modern shopping made simple.
+                Discover quality products at
+                prices you'll love.
+            </p>
+
+
+            <div class="deals-socials">
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="X"
+                >
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div>
+
+            <h3>
+                Shop
+            </h3>
+
+            <a href="shop.html">
+                All Products
+            </a>
+
+            <a href="shop.html">
+                Fashion
+            </a>
+
+            <a href="shop.html">
+                Electronics
+            </a>
+
+            <a href="shop.html">
+                Beauty
+            </a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div>
+
+            <h3>
+                Company
+            </h3>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+            <a href="#">
+                Careers
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+
+        <div>
+
+            <h3>
+                Support
+            </h3>
+
+            <a href="#">
+                Customer Service
+            </a>
+
+            <a href="#">
+                Shipping
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                FAQs
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="deals-footer-bottom">
+
+        <div class="deals-container">
+
+            <p>
+                © 2026 Cartiva. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     DEALS JAVASCRIPT
+===================================================== -->
+
+<script src="js/auth.js"></script>
+<script src="js/deals.js"></script>
+
+
+</body>
+
+</html>
