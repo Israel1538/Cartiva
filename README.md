@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cartiva — Setup Guide
 
 This covers everything needed to get the restored backend and full site
@@ -122,3 +123,7 @@ you'd need to plug in a real email provider to actually send it.
 - **Cart/wishlist** intentionally remain localStorage-based per your
   instructions — they are not tied to a user account, so they won't
   follow you between devices/browsers.
+=======
+# Cartiva
+A modern full-stack e-commerce website built with HTML, CSS, JavaScript, Node.js, Express, and MySQL.
+>>>>>>> daff535dd62763c0c9c408ab6973ade8ccee5ea8
